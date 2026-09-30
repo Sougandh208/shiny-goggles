@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#060918">
+  <title>NovaAd: AI ads for small business</title>
+  <meta name="description" content="Turn a few details about your business into a target audience, a budget split, posters and a video ad in minutes, then learn what your ad numbers mean.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <canvas id="neural" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="/" aria-label="NovaAd home">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22e4ff"/><stop offset="1" stop-color="#ff3d9a"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="9" fill="url(#lg)"/><path d="M9 22 16 8l7 14M11.6 17.5h8.8" fill="none" stroke="#060918" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Nova<b>Ad</b></span>
+      </a>
+      <nav class="tabs" role="tablist" aria-label="Workspace" id="tabs"></nav>
+      <div class="top-actions">
+        <span class="ai-pill" id="ai-pill" hidden></span>
+        <button class="btn btn-ghost" id="kit-btn" type="button" disabled title="Create a campaign first">Download kit</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="panel" id="panel-brief" role="tabpanel" aria-labelledby="tab-brief"></section>
+    <section class="panel" id="panel-strategy" role="tabpanel" aria-labelledby="tab-strategy" hidden></section>
+    <section class="panel" id="panel-creative" role="tabpanel" aria-labelledby="tab-creative" hidden></section>
+    <section class="panel" id="panel-video" role="tabpanel" aria-labelledby="tab-video" hidden></section>
+    <section class="panel" id="panel-coach" role="tabpanel" aria-labelledby="tab-coach" hidden></section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Forecasts use rounded public industry benchmarks scaled to your region. They are planning estimates, not promises. Your photos and logo never leave your device.</p>
+  </footer>
+
+  <div id="pipeline" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="pipe-title">
+    <div class="pipe-card">
+      <div class="pipe-head">
+        <div class="orb" aria-hidden="true"></div>
+        <div>
+          <h2 id="pipe-title">NovaAd engine running</h2>
+          <p class="muted" id="pipe-sub">Building your campaign</p>
+        </div>
+      </div>
+      <ol class="pipe-steps" id="pipe-steps"></ol>
+      <div class="pipe-foot"><button class="btn btn-ghost" id="pipe-skip" type="button">Skip animation</button></div>
+    </div>
+  </div>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
