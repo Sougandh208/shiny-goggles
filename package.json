@@ -1,0 +1,20 @@
+{
+  "name": "novaad",
+  "version": "1.0.0",
+  "description": "AI ad studio for small businesses: audience, budget split, posters, video ads and a plain-English metrics coach.",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test \"test/*.test.js\"",
+    "e2e": "node test/e2e.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}
